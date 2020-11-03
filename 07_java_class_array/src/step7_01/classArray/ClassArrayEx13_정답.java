@@ -1,5 +1,4 @@
 // 2020-11-02 월 1-2교시 15:10-16:50 (1-4번)
-// 
 package step7_01.classArray;
 
 import java.io.BufferedReader;
@@ -97,22 +96,22 @@ class Manager{
 				br = new BufferedReader(fr);
 				
 				String str = "";
-				do {
+				str = br.readLine();
+				while(str != null) {
+					data += (str+"\n");
 					str = br.readLine();
-					System.out.println(str);
-					data += str;
-				} while(str != null); 
-
+				}
 				br.close();
 				fr.close();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		System.out.println("data=" + data);
 		
 		String[] dataArr = data.split("\n");
-		this.stdCnt = Integer.parseInt(dataArr[0].toString());
-		StudentEx[] stdArr = new StudentEx[stdCnt];
+		this.stdCnt = Integer.parseInt(dataArr[0]);
+		this.list = new StudentEx[stdCnt];
 		for (int i = 0; i < this.stdCnt; i++) {
 			String[] temp = dataArr[i+1].split(",");
 			this.list[i] = new StudentEx();
