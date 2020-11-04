@@ -121,7 +121,7 @@ class MyList {
 }
 
 
-public class ClassArrayEx20_문제 {
+public class ClassArrayEx20_정답T {
 
 	public static void main(String[] args) {
 

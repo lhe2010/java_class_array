@@ -68,7 +68,7 @@ class TvList {
 }
 
 
-public class ClassArrayEx21_문제 {
+public class ClassArrayEx21_정답T {
 
 	public static void main(String[] args) {
 		

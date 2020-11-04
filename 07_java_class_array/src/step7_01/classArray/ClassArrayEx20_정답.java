@@ -1,4 +1,5 @@
 // 2020-11-03 화 3교시 17:23-17:48
+// 2020-11-04 수 1교시 15:10-15:20
 package step7_01.classArray;
 
 //# ArrayList 클래스의 기능을 직접 구현해보자!
@@ -15,7 +16,7 @@ class MyList {
 			if(i != eCnt-1)
 				System.out.print(", ");
 		}
-		System.out.print("]");
+		System.out.print("]\n");
 	}
 	
 	void add(int value) {
@@ -27,34 +28,45 @@ class MyList {
 			for (int i = 0; i < temp.length; i++) {
 				arr[i] = temp[i];
 			}
+			temp = null;
 		}
 		arr[eCnt++] = value;
 	}
 	
 	void add(int index, int value) {
 		if(eCnt == 0) {
-			arr = new int[eCnt+1];
-			arr[0] = value;
+			this.add(value);
 		} else {
 			int[] temp = arr;
 			arr = new int[eCnt+1];
 			
 			int j = 0;
-			for (int i = 0; i < this.eCnt; i++) {
-				if(i != index) {
-					arr[i] = temp[j];
-					j++;
-				} else if( i == index) {
-					arr[i] = value;
-				}
+			for (int i = 0; i < this.eCnt+1; i++) {
+				if(i != index) 
+					arr[i] = temp[j++];
 			}
+			temp = null;
+			arr[index] = value;
 		}
 		this.eCnt++;
 	}
-
 	
 	void remove(int index) {
-		
+		if(eCnt == 1) {
+			this.arr = null;
+		} else {
+			int[] temp = arr;
+			arr = new int[eCnt-1];
+			
+			int j = 0;
+			for (int i = 0; i < this.eCnt; i++) {
+				if(i != index) {
+					arr[j++] = temp[i];
+				}
+			}
+			temp = null;
+		}
+		eCnt--;
 	}
 
 	int size() {

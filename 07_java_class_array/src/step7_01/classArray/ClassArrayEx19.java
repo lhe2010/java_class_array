@@ -18,21 +18,19 @@ import java.util.ArrayList;
  *
  *  [ java.util.ArrayList ]
  * - 배열은 한번 선언하면 프로그램에서 그 크기를 바꿀 수 없다.
- * - ArrayList 클래스는 데이터가 입력되면, 자동으로 크기가 커지고
- * - 데이터가 제거되면, 자동으로 크기가 작아진다.
+ * - ArrayList 클래스는 데이터가 입력되면 자동으로 크기가 커지고, 데이터가 제거되면 자동으로 크기가 작아진다.
  * - 중간에 데이터가 삽입되면, 데이터가 삽입될 위치부터 모든 데이터가 뒤로 이동되고
  * - 중간의 데이터가 제거된 다음 위치부터 모든 데이터가 앞으로 이동한다.
  * - ArrayList 생성 방법
  *   ArrayList list = new ArrayList();                      // JDK 1.4 이전
  *   ArrayList<Integer> list = new ArrayList<Integer>();    // JDK 1.5 이후
- *   ArrayList<Integer> list = new ArrayList<>();           // JDK 1.7 이후 
+ *   ArrayList<Integer> list = new ArrayList<>();           // JDK 1.7 이후 (제네릭 생략가능) 
  * 
  *  [ 제네릭 ]
- * - 제네릭(generic)이라 부르며 ArrayList에 저장될 데이터 타입을
- *   반드시 클래스로 작성한다.
- * - 기본 자료형 데이터를 저장하는 ArrayList를 만들어야 하는 경우에는
- *   래퍼 클래스를 사용한다.
+ * - 제네릭(generic)이라 부르며 ArrayList에 저장될 데이터 타입을 반드시 클래스로 작성한다.
+ * - 기본 자료형 데이터를 저장하는 ArrayList를 만들어야 하는 경우에는 래퍼 클래스를 사용한다.
  *    */
+
 public class ClassArrayEx19 {
 
 	public static void main(String[] args) {
